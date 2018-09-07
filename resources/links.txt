@@ -1,0 +1,5 @@
+Choreographe, SDK, Configurator:
+https://community.ald.softbankrobotics.com/en/resources/software/language/en-gb/robot/nao-2
+
+Naoqi Developer Guide:
+http://doc.aldebaran.com/2-5/index_dev_guide.html
