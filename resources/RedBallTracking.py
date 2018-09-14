@@ -8,6 +8,8 @@ import time
 import argparse
 from naoqi import ALProxy
 
+NAO_IP = "141.100.47.205"
+
 def main(IP, PORT, ballSize):
 
     print "Connecting to", IP, "with port", PORT
@@ -15,9 +17,17 @@ def main(IP, PORT, ballSize):
     posture = ALProxy("ALRobotPosture", IP, PORT)
     tracker = ALProxy("ALTracker", IP, PORT)
     tts = ALProxy("ALTextToSpeech", IP, PORT)
+    alife = ALProxy("ALAutonomousLife", IP, PORT)
 
-    # First, wake up.
+    # First, wake up
     motion.wakeUp()
+    print "waking up"
+
+    alife.setState("disabled")
+
+    tracker.stopTracker()
+    tracker.unregisterAllTargets()
+    tracker.toggleSearch(False)
 
     tts.say("Red Ball Detector started")
 
@@ -32,25 +42,33 @@ def main(IP, PORT, ballSize):
     
 	
     # set modes
-    mode = "WholeBody"
+    mode = "Head"
     tracker.setMode(mode)
 
     # Then, start tracker.
     tracker.track(targetName)
 
-    tracker.toggleSearch(True)
-
     print "ALTracker successfully started, now show a red ball to robot!"
     print "Use Ctrl+c to stop this script."
-
-    if tracker.isNewTargetDetected():
-        tts.say("I have detected a Red Ball!")
-        tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
-        tracker.toggleSearch(False)
+    hasTarget = None
 
     try:
         while True:
+
+            if tracker.isNewTargetDetected() and hasTarget == None:
+                tts.say("I have detected a red ball")
+                tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
+                print tracker.getTargetPosition(0)
+                posture.goToPosture("StandInit", fractionMaxSpeed)
+                hasTarget = True
+
+        
+            if tracker.isTargetLost() and hasTarget == True:
+                tts.say("I have lost my Target!")
+                hasTarget = None
+
             time.sleep(1)
+
     except KeyboardInterrupt:
         print
         print "Interrupted by user"
@@ -64,11 +82,12 @@ def main(IP, PORT, ballSize):
 
     print "ALTracker stopped."
     tts.say("Red Ball Detector stopped.")
+    alife.setState("solitary")
 
 if __name__ == "__main__" :
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="141.100.47.205",
+    parser.add_argument("--ip", type=str, default=NAO_IP,
                         help="Robot ip address.")
     parser.add_argument("--port", type=int, default=9559,
                         help="Robot port number.")
