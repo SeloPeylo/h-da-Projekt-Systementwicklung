@@ -19,11 +19,12 @@ def main(IP, PORT, ballSize):
     tts = ALProxy("ALTextToSpeech", IP, PORT)
     alife = ALProxy("ALAutonomousLife", IP, PORT)
 
+    alife.setState("disabled")
     # First, wake up
     motion.wakeUp()
     print "waking up"
 
-    alife.setState("disabled")
+   
 
     tracker.stopTracker()
     tracker.unregisterAllTargets()
@@ -51,9 +52,21 @@ def main(IP, PORT, ballSize):
     print "ALTracker successfully started, now show a red ball to robot!"
     print "Use Ctrl+c to stop this script."
     hasTarget = None
+    lastPositions = []
 
     try:
         while True:
+
+            print tracker.getTargetPosition(0)
+            if tracker.isNewTargetDetected():
+                tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
+                tracker.pointAt("RArm", tracker.getTargetPosition(0), 0, 0.8)
+
+                if len(lastPositions) <= 5:
+                    lastPositions.append(tracker.getTargetPosition(0))
+                else:
+                    lastPositions.pop()
+                    lastPositions.append(tracker.getTargetPosition(0))
 
             if tracker.isNewTargetDetected() and hasTarget == None:
                 tts.say("I have detected a red ball")
@@ -62,17 +75,19 @@ def main(IP, PORT, ballSize):
                 posture.goToPosture("StandInit", fractionMaxSpeed)
                 hasTarget = True
 
-        
+       
             if tracker.isTargetLost() and hasTarget == True:
                 tts.say("I have lost my Target!")
                 hasTarget = None
 
-            time.sleep(1)
+            time.sleep(0.1)
 
     except KeyboardInterrupt:
         print
         print "Interrupted by user"
         print "Stopping..."
+
+        print lastPositions
 
     # Stop tracker, go to posture Sit.
     tracker.stopTracker()
