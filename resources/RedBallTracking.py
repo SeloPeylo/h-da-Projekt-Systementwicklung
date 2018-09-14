@@ -53,20 +53,26 @@ def main(IP, PORT, ballSize):
     print "Use Ctrl+c to stop this script."
     hasTarget = None
     lastPositions = []
+    positionCounter = 0
 
     try:
         while True:
 
-            print tracker.getTargetPosition(0)
+            #print tracker.getTargetPosition(0)
             if tracker.isNewTargetDetected():
-                tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
-                tracker.pointAt("RArm", tracker.getTargetPosition(0), 0, 0.8)
+                #tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
+                #tracker.pointAt("RArm", tracker.getTargetPosition(0), 0, 0.8)
 
                 if len(lastPositions) <= 5:
                     lastPositions.append(tracker.getTargetPosition(0))
+                    positionCounter += 1
                 else:
                     lastPositions.pop()
                     lastPositions.append(tracker.getTargetPosition(0))
+                    positionCounter += 1
+
+            if positionCounter >= 5:
+                print lastPositions
 
             if tracker.isNewTargetDetected() and hasTarget == None:
                 tts.say("I have detected a red ball")
