@@ -14,8 +14,8 @@
     <Timeline enable="0">
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
-          <Diagram>
-            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="328" y="30">
+          <Diagram scale="70.7107">
+            <Box name="Red Ball Tracker" id="9" localization="-1" tooltip="This box makes the robot track a red ball with different modes." x="357" y="37">
               <bitmap>media/images/box/tracker/tracker.png</bitmap>
               <script language="4">
                 <content>
@@ -182,7 +182,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="Wz angle of the vector robot-target the robot will try to maintain in move modes." id="15" />
               <Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="16" />
             </Box>
-            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="226" y="175">
+            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="166" y="218">
               <bitmap>media/images/box/interaction/choice.png</bitmap>
               <script language="4">
                 <content>
@@ -235,7 +235,7 @@ class MyClass(GeneratedClass):
               <Output name="output_3" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="6" />
               <Output name="output_4" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="7" />
             </Box>
-            <Box name="Point At" id="10" localization="-1" tooltip="This box makes the robot point to a desired position." x="470" y="177">
+            <Box name="Point At" id="10" localization="-1" tooltip="This box makes the robot point to a desired position." x="522" y="277">
               <bitmap>media/images/box/movement/move_arm.png</bitmap>
               <script language="4">
                 <content>
@@ -344,7 +344,7 @@ class MyClass(GeneratedClass):
                 <Choice value="Robot" />
               </Parameter>
             </Box>
-            <Box name="Point At (1)" id="3" localization="-1" tooltip="This box makes the robot point to a desired position." x="476" y="270">
+            <Box name="Point At (1)" id="3" localization="-1" tooltip="This box makes the robot point to a desired position." x="525" y="377">
               <bitmap>media/images/box/movement/move_arm.png</bitmap>
               <script language="4">
                 <content>
@@ -453,7 +453,7 @@ class MyClass(GeneratedClass):
                 <Choice value="Robot" />
               </Parameter>
             </Box>
-            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="534" y="0">
+            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="570" y="0">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -596,7 +596,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Say" id="1" localization="8" tooltip="Say some text. The text can be localized." x="210" y="22">
+            <Box name="Say" id="1" localization="8" tooltip="Say some text. The text can be localized." x="217" y="39">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -653,7 +653,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="I am looking for the red ball" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="SadReaction" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="479" y="377">
+            <Box name="SadReaction" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="698" y="81">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -878,7 +878,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Miss You" id="6" localization="8" tooltip="Say some text. The text can be localized." x="614" y="374">
+            <Box name="Miss You" id="6" localization="8" tooltip="Say some text. The text can be localized." x="698" y="181">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -982,7 +982,7 @@ class MyClass(GeneratedClass):
               <Resource name="All motors" type="Lock" timeout="0" />
               <Resource name="Stiffness" type="Lock" timeout="0" />
             </Box>
-            <Box name="Eye LEDs" id="8" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="731" y="375">
+            <Box name="Eye LEDs" id="8" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="834" y="84">
               <bitmap>media/images/box/interaction/LED.png</bitmap>
               <script language="4">
                 <content>
@@ -1070,7 +1070,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="DistanceReaction" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="465" y="484">
+            <Box name="DistanceReaction" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="662" y="519">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -1201,7 +1201,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Too far" id="12" localization="8" tooltip="Say some text. The text can be localized." x="632" y="483">
+            <Box name="Too far" id="12" localization="8" tooltip="Say some text. The text can be localized." x="391" y="493">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1258,7 +1258,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="It is Dangerous to go alone Spheero" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Wait" id="13" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="598" y="622">
+            <Box name="Wait" id="13" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="372" y="599">
               <bitmap>media/images/box/wait.png</bitmap>
               <script language="4">
                 <content>
@@ -1298,7 +1298,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="2.5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
               <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
             </Box>
-            <Box name="Walk Toward" id="14" localization="8" tooltip="Make the robot walk in the direction you set in parameters.&#x0A;&#x0A;!!Warning!! the robot will not stop walking by himself. You need to either set x, y and theta to 0 or stop the box to stop him.&#x0A;&#x0A;Note: You can set the period of walk direction update in parameters." x="750" y="597">
+            <Box name="Walk Toward" id="14" localization="8" tooltip="Make the robot walk in the direction you set in parameters.&#x0A;&#x0A;!!Warning!! the robot will not stop walking by himself. You need to either set x, y and theta to 0 or stop the box to stop him.&#x0A;&#x0A;Note: You can set the period of walk direction update in parameters." x="675" y="635">
               <bitmap>media/images/box/movement/walk_forward.png</bitmap>
               <script language="4">
                 <content>
@@ -1509,12 +1509,58 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Legs" type="Lock" timeout="0" />
             </Box>
+            <Box name="Go to position Stand (1)" id="15" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="965" y="82">
+              <bitmap>media/images/positions/Stand.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[#~ This script was generated automatically by drang&drop from Position Library
+class MyClass(GeneratedClass):
+    def __init__(self):
+        try: # disable autoBind
+          GeneratedClass.__init__(self, False)
+        except TypeError: # if NAOqi < 1.14
+          GeneratedClass.__init__( self )
+
+    def onLoad(self):
+        self.postureService = None
+        try:
+            self.postureService = self.session().service("ALRobotPosture")
+        except:
+            self.logger.error("Module 'ALRobotPosture' not found.")
+
+    def onUnload(self):
+        if(self.postureService != None):
+            self.postureService.stopMove()
+
+    def onInput_onStart(self):
+        if(self.postureService != None):
+            result = self.postureService.goToPosture("Stand", 0.8)
+            if(result):
+                self.success()
+            else:
+                self.logger.error("Posture Stand is not a part of the standard posture library or robot cannot reach the posture")
+                self.failure()
+        else:
+            self.failure()
+
+    def onInput_onStop(self):
+        self.onUnload() #~ it is recommanded to call onUnload of this box in a onStop method,               as the code written in onUnload is used to stop the box as well
+        pass]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+              <Output name="success" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the posture has been reached." id="4" />
+              <Output name="failure" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the posture could not be reached." id="5" />
+              <Resource name="All motors" type="Lock" timeout="0" />
+              <Resource name="Stiffness" type="Lock" timeout="0" />
+            </Box>
             <Link inputowner="2" indexofinput="2" outputowner="9" indexofoutput="7" />
             <Link inputowner="10" indexofinput="2" outputowner="2" indexofoutput="4" />
             <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="5" />
             <Link inputowner="9" indexofinput="2" outputowner="1" indexofoutput="4" />
             <Link inputowner="4" indexofinput="2" outputowner="0" indexofoutput="2" />
-            <Link inputowner="6" indexofinput="2" outputowner="2" indexofoutput="6" />
             <Link inputowner="7" indexofinput="2" outputowner="0" indexofoutput="2" />
             <Link inputowner="1" indexofinput="2" outputowner="7" indexofoutput="4" />
             <Link inputowner="8" indexofinput="2" outputowner="5" indexofoutput="4" />
@@ -1528,6 +1574,10 @@ class MyClass(GeneratedClass):
             <Link inputowner="11" indexofinput="2" outputowner="13" indexofoutput="4" />
             <Link inputowner="0" indexofinput="4" outputowner="11" indexofoutput="4" />
             <Link inputowner="12" indexofinput="2" outputowner="2" indexofoutput="7" />
+            <Link inputowner="5" indexofinput="2" outputowner="9" indexofoutput="5" />
+            <Link inputowner="6" indexofinput="2" outputowner="9" indexofoutput="5" />
+            <Link inputowner="15" indexofinput="2" outputowner="8" indexofoutput="3" />
+            <Link inputowner="0" indexofinput="4" outputowner="15" indexofoutput="4" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
