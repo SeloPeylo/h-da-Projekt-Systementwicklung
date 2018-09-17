@@ -26,6 +26,15 @@
         </message>
     </context>
     <context>
+        <name>behavior_1/behavior.xar:/Say (1)</name>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hello my little friend sphero</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hello my little friend sphero</translation>
+        </message>
+    </context>
+    <context>
         <name>behavior_1/behavior.xar:/Timeline/behavior_layer1/keyframe1/Say</name>
         <message>
             <source>Hello</source>
