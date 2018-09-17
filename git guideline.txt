@@ -1,0 +1,15 @@
+Git Guideline
+
+BITTE vergisst es nicht zu PULLEN!
+	git checkout BRANCHNAME
+	git pull
+
+Updates hochladen(Auch wenn man was gelöscht hat)
+1. Sich im richtigen Branch befinden
+ 	git checkout BRANCHNAME
+
+2. dann add->commit->push
+	git add .(wenn ihr ihre kommplete version hochladen wollt)
+	git add DATEI.EXT/FOLDER (um nur ein Datei zu aktualisieren)
+	git commit -m "message"   (sehr wichtig dass man es mit "-m" eingibt sonst tauch ein weiteres Fenster auf womit ich nichts anfangen kann)
+	git push
