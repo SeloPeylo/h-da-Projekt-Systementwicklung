@@ -8,10 +8,39 @@ import time
 import argparse
 from naoqi import ALProxy
 
-NAO_IP = "141.100.47.205"
+#   IP Adresse als Makro
+NAO_IP = "141.100.53.93"
+
+#   Bewegungserkennung durch Vergleich zweier Positionen
+def getBallStatus(yold, ynew, xpos):
+    tts = ALProxy("ALTextToSpeech", NAO_IP, 9559)
+    
+    if yold is None:
+        return
+
+    difference = 0
+    difference = yold - ynew
+    tolerance = 0.1
+    minDist = 0.45
+    maxDist = 1.8
+
+    if xpos <= minDist:
+        print "Too Close"
+        tts.say("Sphero you are too close")
+    elif xpos >= maxDist:
+        print "Too Far"
+        tts.say("Sphero come back. I miss you.")
+    elif difference <= -tolerance:
+        print "Left"
+        tts.say("Left")
+    elif difference >= tolerance:
+        print "Right"
+        tts.say("Right")
+
 
 def main(IP, PORT, ballSize):
 
+    #   Initialisierung der Proxys
     print "Connecting to", IP, "with port", PORT
     motion = ALProxy("ALMotion", IP, PORT)
     posture = ALProxy("ALRobotPosture", IP, PORT)
@@ -19,18 +48,15 @@ def main(IP, PORT, ballSize):
     tts = ALProxy("ALTextToSpeech", IP, PORT)
     alife = ALProxy("ALAutonomousLife", IP, PORT)
 
+    #   Autonomous Life ausschalten
     alife.setState("disabled")
-    # First, wake up
+    posture.goToPosture("StandInit", 0.8)
     motion.wakeUp()
-    print "waking up"
 
-   
-
+    #   ALTracker resetten und konfigurieren
     tracker.stopTracker()
     tracker.unregisterAllTargets()
     tracker.toggleSearch(False)
-
-    tts.say("Red Ball Detector started")
 
     fractionMaxSpeed = 0.8
     # Go to posture stand
@@ -40,7 +66,6 @@ def main(IP, PORT, ballSize):
     targetName = "RedBall"
     diameterOfBall = ballSize
     tracker.registerTarget(targetName, diameterOfBall)
-    
 	
     # set modes
     mode = "Head"
@@ -48,31 +73,29 @@ def main(IP, PORT, ballSize):
 
     # Then, start tracker.
     tracker.track(targetName)
+    tts.say("Red Ball Detector started")
 
     print "ALTracker successfully started, now show a red ball to robot!"
     print "Use Ctrl+c to stop this script."
-    hasTarget = None
-    lastPositions = []
-    positionCounter = 0
 
+    # Variablen für die Tracking-Schleife
+    hasTarget = None    # Wird True gesetzt wenn ein Target fokussiert wurde
+    yold = None
+    ynew = None
+    xpos = None
+
+    #   Routine nach der Init.. hier wird auf das getrackte Objekt reagiert
     try:
         while True:
+            print tracker.getTargetPosition(0)
 
-            #print tracker.getTargetPosition(0)
-            if tracker.isNewTargetDetected():
-                #tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
-                #tracker.pointAt("RArm", tracker.getTargetPosition(0), 0, 0.8)
+            if hasTarget == True:
+                yold = ynew
+                ynew = tracker.getTargetPosition(0)[1]
+                xpos = tracker.getTargetPosition(0)[0]
+                getBallStatus(yold, ynew, xpos)
+                tracker.pointAt("LArm", tracker.getTargetPosition(0), 0, 0.8)
 
-                if len(lastPositions) <= 5:
-                    lastPositions.append(tracker.getTargetPosition(0))
-                    positionCounter += 1
-                else:
-                    lastPositions.pop()
-                    lastPositions.append(tracker.getTargetPosition(0))
-                    positionCounter += 1
-
-            if positionCounter >= 5:
-                print lastPositions
 
             if tracker.isNewTargetDetected() and hasTarget == None:
                 tts.say("I have detected a red ball")
@@ -93,7 +116,6 @@ def main(IP, PORT, ballSize):
         print "Interrupted by user"
         print "Stopping..."
 
-        print lastPositions
 
     # Stop tracker, go to posture Sit.
     tracker.stopTracker()
