@@ -46,10 +46,9 @@
     <context>
         <name>behavior_1/behavior.xar:/Say (2)</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>I am looking for the red ball</source>
             <comment>Text</comment>
-            <translation type="unfinished">I am looking for the red ball</translation>
+            <translation type="obsolete">I am looking for the red ball</translation>
         </message>
     </context>
     <context>
