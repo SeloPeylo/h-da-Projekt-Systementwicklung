@@ -7,6 +7,7 @@
     <Dialogs />
     <Resources>
         <File name="Sound Effect - Single Clap - 5 Different-[AudioTrimmer.com]" src="Sound Effect - Single Clap - 5 Different-[AudioTrimmer.com].mp3" />
+        <File name="Dragon Ball Z - Sound Effects - Super Saiyan." src="Dragon Ball Z - Sound Effects - Super Saiyan..mp3" />
     </Resources>
     <Topics />
     <IgnoredPaths />
