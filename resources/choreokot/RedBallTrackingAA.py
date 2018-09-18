@@ -21,6 +21,11 @@ class MyClass(GeneratedClass):
 
     def onUnload(self):
         #put clean-up code here
+        self.tracker.stopTracker()
+        self.tracker.ungregisterAllTargets()
+        self.motion.rest()
+        self.tts.say("Red Ball Detector stopped")
+        self.alife.setState("solitary")
         pass
 
     def onInput_onStart(self):
@@ -73,16 +78,16 @@ class MyClass(GeneratedClass):
                 self.maxDist = 1.8
 
                 if self.xpos <= self.minDist:
-
+                    self.movementDetected("near")
                     self.tts.say("Sphero you are too close")
                 elif self.xpos >= self.maxDist:
-
+                    self.movementDetected("far")
                     self.tts.say("Sphero come back. I miss you.")
                 elif self.difference <= -self.tolerance:
-
+                    self.movementDetected("left")
                     self.tts.say("Left")
                 elif self.difference >= self.tolerance:
-
+                    self.movementDetected("right")
                     self.tts.say("Right")
 
                 self.tracker.pointAt("LArm", self.tracker.getTargetPosition(0), 0, 0.8)
