@@ -14,7 +14,7 @@
     <Timeline enable="0">
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
-          <Diagram scale="118.921">
+          <Diagram scale="100">
             <Box name="Switch Case" id="5" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="389" y="89">
               <bitmap>media/images/box/interaction/choice.png</bitmap>
               <script language="4">
@@ -3450,59 +3450,13 @@ class MyClass(GeneratedClass):
               <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
               <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
               <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
-              <Output name="output" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
+              <Input name="TrackerStop" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+              <Output name="output" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" />
               <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="-1">
                 <BehaviorLayer name="behavior_layer1">
                   <BehaviorKeyframe name="keyframe1" index="1">
-                    <Diagram scale="200">
-                      <Box name="Go to position Stand" id="23" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="210" y="86">
-                        <bitmap>media/images/positions/Stand.png</bitmap>
-                        <script language="4">
-                          <content>
-                            <![CDATA[#~ This script was generated automatically by drang&drop from Position Library
-class MyClass(GeneratedClass):
-    def __init__(self):
-        try: # disable autoBind
-          GeneratedClass.__init__(self, False)
-        except TypeError: # if NAOqi < 1.14
-          GeneratedClass.__init__( self )
-
-    def onLoad(self):
-        self.postureService = None
-        try:
-            self.postureService = self.session().service("ALRobotPosture")
-        except:
-            self.logger.error("Module 'ALRobotPosture' not found.")
-
-    def onUnload(self):
-        if(self.postureService != None):
-            self.postureService.stopMove()
-
-    def onInput_onStart(self):
-        if(self.postureService != None):
-            result = self.postureService.goToPosture("Stand", 0.8)
-            if(result):
-                self.success()
-            else:
-                self.logger.error("Posture Stand is not a part of the standard posture library or robot cannot reach the posture")
-                self.failure()
-        else:
-            self.failure()
-
-    def onInput_onStop(self):
-        self.onUnload() #~ it is recommanded to call onUnload of this box in a onStop method,               as the code written in onUnload is used to stop the box as well
-        pass]]>
-                          </content>
-                        </script>
-                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                        <Output name="success" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the posture has been reached." id="4" />
-                        <Output name="failure" type="1" type_size="1" nature="1" inner="0" tooltip="Stimulated if the posture could not be reached." id="5" />
-                        <Resource name="All motors" type="Lock" timeout="0" />
-                        <Resource name="Stiffness" type="Lock" timeout="0" />
-                      </Box>
+                    <Diagram scale="118.921">
                       <Box name="Speech Reco." id="2" localization="8" tooltip="Recognize a word from a list of words set in the box parameters.&#x0A;&#x0A;V1.1.0&#x0A;" x="823" y="194">
                         <bitmap>media/images/box/interaction/ear.png</bitmap>
                         <script language="4">
@@ -3724,12 +3678,13 @@ class MyClass(GeneratedClass):
                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                         <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        <Input name="TrackerStop" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
                         <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="-1">
                           <BehaviorLayer name="behavior_layer1">
                             <BehaviorKeyframe name="keyframe1" index="1">
-                              <Diagram scale="168.179">
-                                <Box name="RedBallTracker" id="1" localization="8" tooltip="" x="534" y="245">
+                              <Diagram scale="70.7107">
+                                <Box name="TrackerReactions" id="1" localization="8" tooltip="" x="693" y="387">
                                   <bitmap>media/images/box/box-python-script.png</bitmap>
                                   <script language="4">
                                     <content>
@@ -3744,7 +3699,7 @@ class MyClass(GeneratedClass):
 
         print("\nInput_Stop")
 
-        self.tracker.stopTracker()
+        #self.tracker.stopTracker()
         self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
         self.onStopped() #activate the output of the box
 
@@ -3778,43 +3733,45 @@ class MyClass(GeneratedClass):
         print("\nInput_Start")
         #self.onStopped() #activate the output of the box
 
-        while True:
+        if self.tracker.isTargetLost():
+            self.tts.say("I have lost my Target!")
+            self.lostTarget()
+
+        while self.tracker.isTargetLost() != True:
             print("\n\n --- Schleife ---")
             print(self.xpos)
 
-            if self.tracker.isTargetLost():
-                self.tts.say("I have lost my Target!")
-                self.lostTarget()
-            else:
-                self.yold = self.ynew
-                self.ynew = self.tracker.getTargetPosition(0)[1]
-                self.xpos = self.tracker.getTargetPosition(0)[0]
+            self.yold = self.ynew
+            position = self.tracker.getTargetPosition(0)
+            print position
+            self.ynew = position[1]
+            self.xpos = position[0]
 
-                if self.yold != 0:
-                    self.difference = 0
-                    self.difference = self.yold - self.ynew
-                    self.tolerance = 0.1
-                    self.minDist = 0.5
-                    self.maxDist = 1.8
+            if self.yold != 0:
+                self.difference = 0
+                self.difference = self.yold - self.ynew
+                self.tolerance = 0.1
+                self.minDist = 0.5
+                self.maxDist = 1.8
 
-                    if self.xpos <= self.minDist:
-                        self.movementDetected("near")
-                        #self.tts.say("Sphero you are too close")
-                        print("near")
-                    elif self.xpos >= self.maxDist:
-                        self.movementDetected("far")
-                        #self.tts.say("Sphero come back. I miss you.")
-                        print("far")
-                    elif self.difference <= -self.tolerance:
-                        self.movementDetected("left")
-                        print("left")
-                        #self.tts.say("Left")
-                    elif self.difference >= self.tolerance:
-                        self.movementDetected("right")
-                        print("right")
-                        #self.tts.say("Right")
+                if self.xpos <= self.minDist:
+                    self.movementDetected("near")
+                    #self.tts.say("Sphero you are too close")
+                    print("near")
+                elif self.xpos >= self.maxDist:
+                    self.movementDetected("far")
+                    #self.tts.say("Sphero come back. I miss you.")
+                    print("far")
+                elif self.difference <= -self.tolerance:
+                    self.movementDetected("left")
+                    print("left")
+                    #self.tts.say("Left")
+                elif self.difference >= self.tolerance:
+                    self.movementDetected("right")
+                    print("right")
+                    #self.tts.say("Right")
 
-                #self.tracker.pointAt("LArm", self.tracker.getTargetPosition(0), 0, 0.8)
+            #self.tracker.pointAt("LArm", self.tracker.getTargetPosition(0), 0, 0.8)
 
             time.sleep(0.2)]]>
                                     </content>
@@ -3889,12 +3846,15 @@ class MyClass(GeneratedClass):
                 #self.posture.goToPosture("StandInit", self.fractionMaxSpeed)
                 self.hasTargetDetected = True
                 self.hasTarget()
-            time.sleep(0.1)
 
+            elif self.hasTargetDetected:
+                self.hasTarget()
+
+        time.sleep(0.1)
         pass
     def onInput_onTargetLost(self):
         self.hasTargetDetected = None
-
+        self.tracker.track(self.targetName)
         while True:
 
             if self.tracker.isNewTargetDetected() and self.hasTargetDetected == None:
@@ -3917,20 +3877,24 @@ class MyClass(GeneratedClass):
                                   <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
                                   <Output name="hasTarget" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" />
                                 </Box>
-                                <Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="5" />
+                                <Link inputowner="0" indexofinput="5" outputowner="1" indexofoutput="5" />
                                 <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="1" />
                                 <Link inputowner="1" indexofinput="2" outputowner="2" indexofoutput="6" />
                                 <Link inputowner="2" indexofinput="4" outputowner="1" indexofoutput="6" />
                                 <Link inputowner="1" indexofinput="3" outputowner="1" indexofoutput="5" />
+                                <Link inputowner="1" indexofinput="3" outputowner="1" indexofoutput="6" />
+                                <Link inputowner="2" indexofinput="3" outputowner="0" indexofoutput="4" />
+                                <Link inputowner="1" indexofinput="3" outputowner="2" indexofoutput="5" />
+                                <Link inputowner="2" indexofinput="3" outputowner="1" indexofoutput="5" />
                               </Diagram>
                             </BehaviorKeyframe>
                           </BehaviorLayer>
                         </Timeline>
                       </Box>
-                      <Link inputowner="23" indexofinput="2" outputowner="6" indexofoutput="3" />
                       <Link inputowner="6" indexofinput="2" outputowner="0" indexofoutput="1" />
-                      <Link inputowner="4" indexofinput="2" outputowner="23" indexofoutput="4" />
-                      <Link inputowner="0" indexofinput="5" outputowner="4" indexofoutput="4" />
+                      <Link inputowner="0" indexofinput="6" outputowner="4" indexofoutput="5" />
+                      <Link inputowner="4" indexofinput="4" outputowner="0" indexofoutput="4" />
+                      <Link inputowner="4" indexofinput="2" outputowner="6" indexofoutput="3" />
                     </Diagram>
                   </BehaviorKeyframe>
                 </BehaviorLayer>
@@ -4378,7 +4342,7 @@ class MyClass(GeneratedClass):
             <Link inputowner="32" indexofinput="2" outputowner="5" indexofoutput="4" />
             <Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="5" />
             <Link inputowner="4" indexofinput="2" outputowner="0" indexofoutput="2" />
-            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="4" />
+            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="5" />
             <Link inputowner="4" indexofinput="2" outputowner="32" indexofoutput="4" />
             <Link inputowner="4" indexofinput="2" outputowner="1" indexofoutput="4" />
             <Link inputowner="4" indexofinput="2" outputowner="9" indexofoutput="4" />
@@ -4390,7 +4354,10 @@ class MyClass(GeneratedClass):
             <Link inputowner="2" indexofinput="3" outputowner="15" indexofoutput="4" />
             <Link inputowner="5" indexofinput="2" outputowner="5" indexofoutput="3" />
             <Link inputowner="3" indexofinput="2" outputowner="5" indexofoutput="4" />
-            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="5" />
+            <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="6" />
+            <Link inputowner="4" indexofinput="4" outputowner="19" indexofoutput="10" />
+            <Link inputowner="4" indexofinput="4" outputowner="19" indexofoutput="9" />
+            <Link inputowner="4" indexofinput="4" outputowner="19" indexofoutput="8" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>
