@@ -206,6 +206,12 @@
             <comment>Text</comment>
             <translation type="obsolete">Sphero, you're great!</translation>
         </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hey! Stay away!</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hey! Stay away!</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Say (1)</name>
