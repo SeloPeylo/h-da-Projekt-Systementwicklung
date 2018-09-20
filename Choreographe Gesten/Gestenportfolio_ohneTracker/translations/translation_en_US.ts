@@ -165,23 +165,20 @@
     <context>
         <name>behavior_1/behavior.xar:/Miss You</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>I miss you Spheero</source>
             <comment>Text</comment>
-            <translation type="unfinished">I miss you Spheero</translation>
-        </message>
-    </context>
-    <context>
-        <name>behavior_1/behavior.xar:/Reset_and_hear/behavior_layer1/keyframe1/Tracker/behavior_layer1/keyframe1/Say</name>
-        <message>
-            <source>Hello</source>
-            <comment>Text</comment>
-            <translation type="vanished">Hello</translation>
+            <translation type="obsolete">I miss you Spheero</translation>
         </message>
         <message>
-            <source>Tracker stopped</source>
+            <source>Come back Sphero! I miss you...</source>
             <comment>Text</comment>
-            <translation type="obsolete">Tracker stopped</translation>
+            <translation type="obsolete">Come back Sphero! I miss you...</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Sphero! Come back! I miss you...</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Sphero! Come back! I miss you...</translation>
         </message>
     </context>
     <context>
@@ -206,6 +203,12 @@
             <comment>Text</comment>
             <translation type="obsolete">Sphero, you're great!</translation>
         </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hey! Stay away!</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hey! Stay away!</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Say (1)</name>
@@ -222,6 +225,19 @@
             <source>I am looking for the red ball</source>
             <comment>Text</comment>
             <translation type="obsolete">I am looking for the red ball</translation>
+        </message>
+    </context>
+    <context>
+        <name>behavior_1/behavior.xar:/Stop!/behavior_layer1/keyframe1/Say</name>
+        <message>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hello</translation>
+        </message>
+        <message>
+            <source>Hey! Stay away!</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hey! Stay away!</translation>
         </message>
     </context>
     <context>
