@@ -183,6 +183,11 @@
             <comment>Text</comment>
             <translation type="obsolete">Tracker stopped</translation>
         </message>
+        <message>
+            <source>Hello my little friend sphero</source>
+            <comment>Text</comment>
+            <translation type="obsolete">Hello my little friend sphero</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Say</name>
