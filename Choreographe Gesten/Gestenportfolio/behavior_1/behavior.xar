@@ -15,7 +15,7 @@
       <BehaviorLayer name="behavior_layer1">
         <BehaviorKeyframe name="keyframe1" index="1">
           <Diagram scale="42.0448">
-            <Box name="Switch Case" id="5" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="416" y="96">
+            <Box name="Switch Case" id="5" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="221" y="104">
               <bitmap>media/images/box/interaction/choice.png</bitmap>
               <script language="4">
                 <content>
@@ -80,7 +80,7 @@ class MyClass(GeneratedClass):
               <Output name="output_6" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="9" />
               <Output name="output_7" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="10" />
             </Box>
-            <Box name="Stop!" id="9" localization="8" tooltip="" x="1666" y="326">
+            <Box name="Stop!" id="9" localization="8" tooltip="" x="1190" y="185">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -202,7 +202,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="helloSphero" id="10" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="922" y="341">
+            <Box name="helloSphero" id="10" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="520" y="336">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -522,7 +522,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Say (1)" id="11" localization="8" tooltip="Say some text. The text can be localized." x="1110" y="466">
+            <Box name="Say (1)" id="11" localization="8" tooltip="Say some text. The text can be localized." x="667" y="436">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -579,7 +579,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="Hello my little friend sphero" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Wait" id="12" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="926" y="460">
+            <Box name="Wait" id="12" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="526" y="432">
               <bitmap>media/images/box/wait.png</bitmap>
               <script language="4">
                 <content>
@@ -619,7 +619,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="2.5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
               <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
             </Box>
-            <Box name="Eye LEDs (2)" id="13" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="926" y="571">
+            <Box name="Eye LEDs (2)" id="13" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="528" y="529">
               <bitmap>media/images/box/interaction/LED.png</bitmap>
               <script language="4">
                 <content>
@@ -707,7 +707,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="SadReaction" id="21" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="1460" y="722">
+            <Box name="SadReaction" id="21" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="894" y="546">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -932,7 +932,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Miss You" id="22" localization="8" tooltip="Say some text. The text can be localized." x="1459" y="827">
+            <Box name="Miss You" id="22" localization="8" tooltip="Say some text. The text can be localized." x="897" y="648">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -989,7 +989,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="I miss you Spheero" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Eye LEDs (4)" id="24" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="1456" y="600">
+            <Box name="Eye LEDs (4)" id="24" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="892" y="445">
               <bitmap>media/images/box/interaction/LED.png</bitmap>
               <script language="4">
                 <content>
@@ -1077,7 +1077,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="DistanceReaction" id="25" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="948" y="830">
+            <Box name="DistanceReaction" id="25" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="658" y="790">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -1208,7 +1208,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Too far" id="26" localization="8" tooltip="Say some text. The text can be localized." x="790" y="821">
+            <Box name="Too far" id="26" localization="8" tooltip="Say some text. The text can be localized." x="542" y="790">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -1262,10 +1262,10 @@ class MyClass(GeneratedClass):
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
               <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
               <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="80" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
-              <Parameter name="Text" inherits_from_parent="0" content_type="5" value="It is Dangerous to go alone Spheero" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
+              <Parameter name="Text" inherits_from_parent="0" content_type="5" value="Spheero, come back! It is Dangerous to go alone!" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Wait (1)" id="27" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="791" y="931">
+            <Box name="Wait (1)" id="27" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="541" y="895">
               <bitmap>media/images/box/wait.png</bitmap>
               <script language="4">
                 <content>
@@ -1305,7 +1305,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="2.5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
               <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
             </Box>
-            <Box name="Walk Toward" id="28" localization="8" tooltip="Make the robot walk in the direction you set in parameters.&#x0A;&#x0A;!!Warning!! the robot will not stop walking by himself. You need to either set x, y and theta to 0 or stop the box to stop him.&#x0A;&#x0A;Note: You can set the period of walk direction update in parameters." x="952" y="938">
+            <Box name="Walk Toward" id="28" localization="8" tooltip="Make the robot walk in the direction you set in parameters.&#x0A;&#x0A;!!Warning!! the robot will not stop walking by himself. You need to either set x, y and theta to 0 or stop the box to stop him.&#x0A;&#x0A;Note: You can set the period of walk direction update in parameters." x="662" y="892">
               <bitmap>media/images/box/movement/walk_forward.png</bitmap>
               <script language="4">
                 <content>
@@ -1516,7 +1516,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Legs" type="Lock" timeout="0" />
             </Box>
-            <Box name="Go to position Stand (1)" id="29" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="1591" y="602">
+            <Box name="Go to position Stand (1)" id="29" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="1010" y="447">
               <bitmap>media/images/positions/Stand.png</bitmap>
               <script language="4">
                 <content>
@@ -1563,7 +1563,7 @@ class MyClass(GeneratedClass):
               <Resource name="All motors" type="Lock" timeout="0" />
               <Resource name="Stiffness" type="Lock" timeout="0" />
             </Box>
-            <Box name="Eye LEDs (5)" id="30" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="1736" y="599">
+            <Box name="Eye LEDs (5)" id="30" localization="8" tooltip="Set the LED color of the eyes. Note that you must open the box to enter the color." x="1139" y="446">
               <bitmap>media/images/box/interaction/LED.png</bitmap>
               <script language="4">
                 <content>
@@ -1651,7 +1651,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Tactile Head" id="19" localization="8" tooltip="Detect touch on head tactile sensor." x="601" y="0">
+            <Box name="Tactile Head" id="19" localization="8" tooltip="Detect touch on head tactile sensor." x="475" y="2">
               <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
               <script language="4">
                 <content>
@@ -1794,7 +1794,7 @@ class MyClass(GeneratedClass):
               </Timeline>
               <Resource name="Head-sequence" type="Lock" timeout="0" />
             </Box>
-            <Box name="Timeline (1)" id="15" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="1186" y="1145">
+            <Box name="Timeline (1)" id="15" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="892" y="799">
               <bitmap>media/images/box/movement/move.png</bitmap>
               <script language="4">
                 <content>
@@ -2155,7 +2155,7 @@ class MyClass(GeneratedClass):
                 </ActuatorList>
               </Timeline>
             </Box>
-            <Box name="Clapping" id="32" localization="8" tooltip="" x="903" y="204">
+            <Box name="Clapping" id="32" localization="8" tooltip="" x="520" y="211">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -2834,7 +2834,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Reset_and_hear" id="4" localization="8" tooltip="" x="222" y="95">
+            <Box name="Reset_and_hear" id="4" localization="8" tooltip="" x="66" y="104">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -3080,7 +3080,7 @@ class MyClass(GeneratedClass):
                         <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="-1">
                           <BehaviorLayer name="behavior_layer1">
                             <BehaviorKeyframe name="keyframe1" index="1">
-                              <Diagram scale="84.0896">
+                              <Diagram scale="70.7107">
                                 <Box name="Python Script" id="5" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="315" y="1022">
                                   <bitmap>media/images/box/box-python-script.png</bitmap>
                                   <script language="4">
@@ -3161,6 +3161,7 @@ class MyClass(GeneratedClass):
         self.targetName = "RedBall"
         self.diameterOfBall = 0.06
         self.mode = "Head"
+        self.n = 0
 
         # Then, start tracker.
 
@@ -3178,69 +3179,66 @@ class MyClass(GeneratedClass):
         while True:
 
             print("HasTarget_onFound: ", self.hasTargetDetected)
-            #if self.tracker.isNewTargetDetected() and self.hasTargetDetected == None:
-                #self.SpheroFound()
-                ##self.tts.say("Sphero detected")
-                #self.hasTargetDetected = True
-            print(self.i)
+            print("i: ", self.i)
             if self.hasTargetDetected:
                 if self.tracker.isTargetLost():
+                    self.n = 0
                     self.i = self.i + 1
-                    if self.i == 10:
-                        self.targetLost("left");
-                    if self.i == 20:
+                    if self.i == 5:
                         self.targetLost("right");
-                    if self.i >= 30:
-
+                        self.tts.say("Sphero ?")
+                    if self.i == 20:
+                        self.targetLost("left");
+                    if self.i >= 35:
                         self.movementDetected("lost")
                         break
                         print("break lost")
                 else:
-                    self.i = 0
                     self.position = self.tracker.getTargetPosition(0)
                     self.xpos = self.position[0]
-                    self.yold = self.ynew
-                    self.ynew = self.position[1]
-                    if self.yold != 0:
+                    self.i = 0
+                    print "n =", self.n
+                    print "Target Coordinates: ", self.position
+
+                    if self.n == 3:
+                        self.yold = self.position[1]
+                        print("yold: ", self.yold)
+
+                    if self.n >= 15:
+                        self.ynew = self.position[1]
                         self.difference = 0
                         self.difference = self.yold - self.ynew
                         self.tolerance = 0.2
-                        self.minDist = 0.4
-                        self.maxDist = 2.5
-                        self.n += 1
-                        self.n %= 10
-                        print "Target Coordinates: ", self.position
-                        print "n =", self.n
+                        self.minDist = 0.7
+                        self.maxDist = 2.8
 
-                        if self.xpos <= self.minDist and self.n >= 5:
+
+                        if self.xpos <= self.minDist:
                             self.movementDetected("near")
-                            #self.tts.say("Sphero you are too close")
                             print("near")
                             #time.sleep(10)
                             break
                             print("break movement")
-                        elif self.xpos >= self.maxDist and self.n >= 5:
+                        elif self.xpos >= self.maxDist:
                             self.movementDetected("far")
-                            #self.tts.say("Sphero come back. I miss you.")
                             print("far")
                             #time.sleep(10)
                             break
                             print("break movement")
-                        elif self.difference <= -self.tolerance and self.n >= 5:
+                        elif self.difference <= -self.tolerance:
+                            self.n = 0
                             self.movementDetected("left")
                             print("left")
-                            #time.sleep(20)
                             break
                             print("break movement")
-                            #self.tts.say("Left")
-                        elif self.difference >= self.tolerance and self.n >= 5:
+                        elif self.difference >= self.tolerance:
+                            self.n = 0
                             self.movementDetected("right")
                             print("right")
-                            #time.sleep(20)
                             break
                             print("break movement")
-                            #self.tts.say("Right")
 
+                self.n += 1
 
             time.sleep(0.2)
         pass
@@ -3268,6 +3266,7 @@ class MyClass(GeneratedClass):
 
 
         self.hasTargetDetected = None
+        self.n = []
         self.position = [0,0,0]
         print self.position
         self.ynew = 0
@@ -3314,82 +3313,6 @@ class MyClass(GeneratedClass):
                                   <Output name="targetLost" type="3" type_size="1" nature="2" inner="0" tooltip="" id="7" />
                                   <Output name="SpheroFound" type="1" type_size="1" nature="2" inner="0" tooltip="" id="8" />
                                 </Box>
-                                <Box name="Blink" id="1" localization="8" tooltip="This box makes the robot blink once." x="432" y="220">
-                                  <bitmap>media/images/box/interaction/LED.png</bitmap>
-                                  <script language="4">
-                                    <content>
-                                      <![CDATA[import time
-
-class MyClass(GeneratedClass):
-    def __init__(self):
-        GeneratedClass.__init__(self, False)
-
-    def onLoad(self):
-        self.leds = self.session().service("ALLeds")
-
-    def onUnload(self):
-        #~ puts code for box cleanup here
-        pass
-
-    def onInput_onStart(self):
-        rDuration = 0.05
-        self.leds.fadeRGB( "FaceLed0", 0x000000, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed1", 0x000000, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed2", 0xffffff, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed3", 0x000000, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed4", 0x000000, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed5", 0x000000, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed6", 0xffffff, rDuration, _async=True )
-        self.leds.fadeRGB( "FaceLed7", 0x000000, rDuration, _async=True )
-        time.sleep( 0.1 )
-        self.leds.fadeRGB( "FaceLeds", 0xffffff, rDuration )
-        self.onDone()]]>
-                                    </content>
-                                  </script>
-                                  <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                                  <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                                  <Output name="onDone" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="3" />
-                                </Box>
-                                <Box name="Wait" id="2" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="111" y="145">
-                                  <bitmap>media/images/box/wait.png</bitmap>
-                                  <script language="4">
-                                    <content>
-                                      <![CDATA[class MyClass(GeneratedClass):
-    def __init__(self):
-        GeneratedClass.__init__(self, False)
-
-    def onLoad(self):
-        self.waiting = None
-
-    def onUnload(self):
-        self.cancelWaiting()
-
-    def triggerOutput(self):
-        self.timerOutput()
-
-    def cancelWaiting(self):
-        if self.waiting:
-            self.waiting.cancel()
-        self.waiting = None
-
-    def onInput_onStart(self):
-        self.cancelWaiting()
-        import qi
-        self.waiting = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
-
-    def onInput_onStop(self):
-        if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
-            self.timerOutput()
-        self.onUnload()]]>
-                                    </content>
-                                  </script>
-                                  <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                                  <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" />
-                                  <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
-                                  <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" />
-                                  <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="10" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
-                                  <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
-                                </Box>
                                 <Box name="Switch Case" id="3" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="477" y="91">
                                   <bitmap>media/images/box/interaction/choice.png</bitmap>
                                   <script language="4">
@@ -3404,9 +3327,9 @@ class MyClass(GeneratedClass):
 
 	def onInput_onStart(self, p):
 		p = self.typeConversion(p)
-		if(p == self.typeConversion("left")):
+		if(p == self.typeConversion("right")):
 			self.output_1(p)
-		elif(p == self.typeConversion("right")):
+		elif(p == self.typeConversion("left")):
 			self.output_2(p)
 		else:
 			self.onDefault()
@@ -3424,8 +3347,8 @@ class MyClass(GeneratedClass):
                                   </script>
                                   <pluginContent>
                                     <keywords>
-                                      <keyword>&quot;left&quot;</keyword>
                                       <keyword>&quot;right&quot;</keyword>
+                                      <keyword>&quot;left&quot;</keyword>
                                       <keyword></keyword>
                                     </keywords>
                                   </pluginContent>
@@ -3644,7 +3567,6 @@ class MyClass(GeneratedClass):
                                 <Link inputowner="9" indexofinput="2" outputowner="0" indexofoutput="1" />
                                 <Link inputowner="0" indexofinput="7" outputowner="9" indexofoutput="6" />
                                 <Link inputowner="9" indexofinput="4" outputowner="0" indexofoutput="5" />
-                                <Link inputowner="9" indexofinput="2" outputowner="2" indexofoutput="4" />
                                 <Link inputowner="3" indexofinput="2" outputowner="9" indexofoutput="7" />
                                 <Link inputowner="4" indexofinput="2" outputowner="3" indexofoutput="4" />
                                 <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="5" />
@@ -4293,7 +4215,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Music+LED" id="2" localization="8" tooltip="" x="1190" y="1262">
+            <Box name="Music+LED" id="2" localization="8" tooltip="" x="894" y="904">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -4655,7 +4577,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Clapping_Text" id="3" localization="8" tooltip="Say some text. The text can be localized." x="898" y="78">
+            <Box name="Clapping_Text" id="3" localization="8" tooltip="Say some text. The text can be localized." x="517" y="111">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -4712,7 +4634,7 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="Sphero, you&apos;re great!" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
-            <Box name="Stop Behavior (1)" id="8" localization="0" tooltip="Stops the behavior given as an argument." x="1540" y="32">
+            <Box name="Stop Behavior (1)" id="8" localization="0" tooltip="Stops the behavior given as an argument." x="1221" y="16">
               <bitmap>media/images/box/box-diagram.png</bitmap>
               <script language="4">
                 <content>
@@ -4740,7 +4662,7 @@ class MyClass(GeneratedClass):
               <Output name="onBehaviorStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished. Recalls the behavior name." id="3" />
               <Output name="onError" type="3" type_size="1" nature="1" inner="0" tooltip="Triggered if an error occurs while stopping a behavior." id="4" />
             </Box>
-            <Box name="Python Script (1)" id="18" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="1264" y="15">
+            <Box name="Python Script (1)" id="18" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="893" y="12">
               <bitmap>media/images/box/box-python-script.png</bitmap>
               <script language="4">
                 <content>
@@ -4772,7 +4694,7 @@ class MyClass(GeneratedClass):
               <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
               <Output name="stopBehaviour" type="3" type_size="1" nature="2" inner="0" tooltip="" id="5" />
             </Box>
-            <Box name="Hocke (1)" id="16" localization="8" tooltip="" x="1401" y="195">
+            <Box name="Hocke (1)" id="16" localization="8" tooltip="" x="885" y="178">
               <bitmap>media/images/box/box-timeLine.png</bitmap>
               <script language="4">
                 <content>
@@ -5239,7 +5161,7 @@ class MyClass(GeneratedClass):
                 </BehaviorLayer>
               </Timeline>
             </Box>
-            <Box name="Say" id="1" localization="8" tooltip="Say some text. The text can be localized." x="1678" y="432">
+            <Box name="Say" id="1" localization="8" tooltip="Say some text. The text can be localized." x="1193" y="287">
               <bitmap>media/images/box/interaction/say.png</bitmap>
               <script language="4">
                 <content>
@@ -5296,6 +5218,165 @@ class MyClass(GeneratedClass):
               <Parameter name="Text" inherits_from_parent="0" content_type="5" value="Hey! Stay away!" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
               <Resource name="Speech" type="Lock" timeout="0" />
             </Box>
+            <Box name="Say (2)" id="6" localization="8" tooltip="Say some text. The text can be localized." x="890" y="287">
+              <bitmap>media/images/box/interaction/say.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.tts = self.session().service('ALTextToSpeech')
+        self.ttsStop = self.session().service('ALTextToSpeech') #Create another service as wait is blocking if audioout is remote
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += self.getParameter("Text")
+            sentence +=  "\RST\ "
+            id = self.tts.pCall("say",str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+              <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="120" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+              <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+              <Parameter name="Text" inherits_from_parent="0" content_type="5" value="Hey little buddy" default_value="" tooltip="The text you want to say. Don&apos;t forget to translate it!" id="7" />
+              <Resource name="Speech" type="Lock" timeout="0" />
+            </Box>
+            <Box name="Look At" id="7" localization="-1" tooltip="This box makes the robot look at a desired position." x="532" y="626">
+              <bitmap>media/images/box/movement/move_head.png</bitmap>
+              <script language="4">
+                <content>
+                  <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+        self.x = 0.0
+        self.y = 0.0
+        self.z = 0.0
+
+        self.maxSpeed = 0.5
+
+        self.useWholeBody = False
+        self.frame = 0 #FRAME TORSO
+
+    def onLoad(self):
+        self.tracker = self.session().service( "ALTracker" )
+        self.BIND_PYTHON(self.getName(), "setParameter")
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        self.x = self.getParameter("X (m)")
+        self.y = self.getParameter("Y (m)")
+        self.z = self.getParameter("Z (m)")
+
+        self.maxSpeed = self.getParameter("Speed (%)") / 100.0
+        self.useWholeBody = self.getParameter("WholeBody")
+
+        frameStr = self.getParameter("Frame")
+        if frameStr == "Torso":
+            self.frame = 0
+        elif frameStr == "World":
+            self.frame = 1
+        elif frameStr == "Robot":
+            self.frame = 2
+
+        self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
+        self.onStopped()
+
+    def onInput_onStop(self):
+        self.onUnload()
+        pass
+
+    def setParameter(self, parameterName, newValue):
+        GeneratedClass.setParameter(self, parameterName, newValue)
+
+        if (parameterName == "X (m)"):
+            self.x = newValue
+            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
+            self.onStopped()
+            return
+
+        if (parameterName == "Y (m)"):
+            self.y = newValue
+            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
+            self.onStopped()
+            return
+
+        if (parameterName == "Z (m)"):
+            self.z = newValue
+            self.tracker.lookAt([self.x, self.y, self.z], self.frame, self.maxSpeed, self.useWholeBody)
+            self.onStopped()
+            return
+
+        if (parameterName == "Speed (%)"):
+            self.maxSpeed = newValue / 100.0
+            return
+
+        if (parameterName == "WholeBody"):
+            self.useWholeBody = newValue
+            return
+
+        if (parameterName == "Frame"):
+            if(newValue == "Torso"):
+                self.frame = 0
+            elif newValue == "World":
+                self.frame = 1
+            elif newValue == "Robot":
+                self.frame = 2]]>
+                </content>
+              </script>
+              <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+              <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+              <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+              <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+              <Parameter name="X (m)" inherits_from_parent="0" content_type="2" value="2" default_value="1" min="0.001" max="10" tooltip="X coordinate of the target to look at." id="5" />
+              <Parameter name="Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-10" max="10" tooltip="Y coordinate of the target to look at." id="6" />
+              <Parameter name="Z (m)" inherits_from_parent="0" content_type="2" value="-1" default_value="0" min="-10" max="10" tooltip="Z coordinate of the target to look at." id="7" />
+              <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="50" default_value="50" min="1" max="100" tooltip="Speed to move the head towards the desired position." id="8" />
+              <Parameter name="WholeBody" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="Use whole body constraints" id="9" />
+              <Parameter name="Frame" inherits_from_parent="0" content_type="3" value="Torso" default_value="Torso" custom_choice="0" tooltip="Select the frame of target." id="10">
+                <Choice value="Torso" />
+                <Choice value="World" />
+                <Choice value="Robot" />
+              </Parameter>
+            </Box>
             <Link inputowner="11" indexofinput="2" outputowner="12" indexofoutput="4" />
             <Link inputowner="28" indexofinput="3" outputowner="27" indexofoutput="4" />
             <Link inputowner="25" indexofinput="2" outputowner="27" indexofoutput="4" />
@@ -5334,6 +5415,8 @@ class MyClass(GeneratedClass):
             <Link inputowner="4" indexofinput="5" outputowner="2" indexofoutput="4" />
             <Link inputowner="21" indexofinput="2" outputowner="5" indexofoutput="8" />
             <Link inputowner="13" indexofinput="2" outputowner="5" indexofoutput="7" />
+            <Link inputowner="6" indexofinput="2" outputowner="5" indexofoutput="5" />
+            <Link inputowner="7" indexofinput="2" outputowner="5" indexofoutput="7" />
           </Diagram>
         </BehaviorKeyframe>
       </BehaviorLayer>

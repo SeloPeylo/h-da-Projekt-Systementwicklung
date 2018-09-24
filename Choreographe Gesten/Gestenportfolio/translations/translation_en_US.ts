@@ -234,6 +234,17 @@
             <comment>Text</comment>
             <translation type="obsolete">I am looking for the red ball</translation>
         </message>
+        <message>
+            <source>Hello</source>
+            <comment>Text</comment>
+            <translation type="vanished">Hello</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Hey little buddy</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Hey little buddy</translation>
+        </message>
     </context>
     <context>
         <name>behavior_1/behavior.xar:/Timeline/behavior_layer1/keyframe1/Say</name>
@@ -256,10 +267,15 @@
     <context>
         <name>behavior_1/behavior.xar:/Too far</name>
         <message>
-            <location filename="behavior_1/behavior.xar" line="0"/>
             <source>It is Dangerous to go alone Spheero</source>
             <comment>Text</comment>
-            <translation type="unfinished">It is Dangerous to go alone Spheero</translation>
+            <translation type="obsolete">It is Dangerous to go alone Spheero</translation>
+        </message>
+        <message>
+            <location filename="behavior_1/behavior.xar" line="0"/>
+            <source>Spheero, come back! It is Dangerous to go alone!</source>
+            <comment>Text</comment>
+            <translation type="unfinished">Spheero, come back! It is Dangerous to go alone!</translation>
         </message>
     </context>
 </TS>
