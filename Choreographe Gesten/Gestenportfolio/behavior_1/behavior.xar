@@ -3186,7 +3186,7 @@ class MyClass(GeneratedClass):
                     self.i = self.i + 1
                     if self.i == 5:
                         self.targetLost("right");
-                        self.tts.say("Sphero ?")
+                        self.tts.say("Sphero?")
                     if self.i == 20:
                         self.targetLost("left");
                     if self.i >= 35:
