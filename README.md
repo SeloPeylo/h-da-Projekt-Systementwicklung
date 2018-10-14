@@ -11,7 +11,7 @@ Final Project(Branch geste1)
 The final Project is to be found on :
 gruppe2-nao\Choreographe Gesten\Gestenportfolio\Gestenportfolio.pml
 
-You can also check the each single Choreography on the folder :
+Each single Choreography can also be checked on the folder :
 gruppe2-nao\Choreographe Gesten
 
 
